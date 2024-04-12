@@ -28,11 +28,11 @@ metadata:
   name: service-sejokimapp
   namespace: dev
 spec:
-  type: TCP
+  type: NodePort
   selector:
     app: sejokimapp
   ports:
-    - protocol: NodePort
+    - protocol: TCP
       port: 8080
       targetPort: 8888
 
