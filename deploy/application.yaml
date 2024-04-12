@@ -32,7 +32,7 @@ spec:
   selector:
     app: sejokimapp
   ports:
-    - protocol: TCP
+    - protocol: NodePort
       port: 8080
       targetPort: 8888
 
