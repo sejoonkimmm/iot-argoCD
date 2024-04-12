@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: sejokimapp
-        image: wil42/playground:v1
+        image: wil42/playground:v2
         ports:
         - containerPort: 8888
 
@@ -36,22 +36,22 @@ spec:
       targetPort: 8888
       nodePort: 30042
 
----
+# ---
 
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: ingress-sejokimapp
-  namespace: dev
-spec:
-  rules:
-  - host: "localhost"
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: service-sejokimapp
-            port:
-              number: 8080
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: ingress-sejokimapp
+#   namespace: dev
+# spec:
+#   rules:
+#   - host: "localhost"
+#     http:
+#       paths:
+#       - path: /
+#         pathType: Prefix
+#         backend:
+#           service:
+#             name: service-sejokimapp
+#             port:
+#               number: 8080
