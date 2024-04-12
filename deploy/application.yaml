@@ -8,7 +8,7 @@ spec:
   selector:
     matchLabels:
       app: sejokimapp
-  templates:
+  template:
     metadata:
       labels:
         app: sejokimapp
