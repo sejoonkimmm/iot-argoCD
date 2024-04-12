@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: sejokimapp
-        image: wil42/playground:v2
+        image: wil42/playground:v1
         ports:
         - containerPort: 8888
 
@@ -28,13 +28,13 @@ metadata:
   name: service-sejokimapp
   namespace: dev
 spec:
-  type: NodePort
+  type: TCP
   selector:
-    app: service-sejokimapp
+    app: sejokimapp
   ports:
-    - port: 8080
+    - protocol: TCP
+      port: 8080
       targetPort: 8888
-      nodePort: 30042
 
 ---
 
