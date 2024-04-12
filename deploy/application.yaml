@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: sejokimapp
-        image: will42/playground:v1
+        image: wil42/playground:v1
         ports:
         - containerPort: 8888
 
@@ -30,5 +30,5 @@ spec:
     app: sejokimapp
   ports:
     - protocol: TCP
-      port: 8080
+      port: 4242
       targetPort: 8888
